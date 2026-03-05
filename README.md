@@ -126,35 +126,4 @@ For comprehensive technical analysis and contribution breakdown:
 
 ---
 
-## Potential Conference Topics
-
-Topics I'm interested in presenting based on hands-on experience:
-
-**GPU Management in Kubernetes**
-- Building and operating GPU slicing solutions in production
-- Dynamic Resource Allocation implementation challenges and lessons learned
-- E2E testing strategies for GPU workloads
-
-**Platform Engineering**
-- Designing controllers for node configuration management
-- Managing platform-wide migrations (cgroups v2 case study)
-- Building abstractions over kubelet configuration
-
-**Kubernetes at the Edge**
-- Worker latency profiles for high-latency environments
-- Node configuration tuning for edge deployments
-- Real-world edge computing challenges
-
-**Container Runtime Integration**
-- CRI-O development and Kubernetes feature enablement
-- Event-driven pod lifecycle architecture
-- Runtime-kubelet interaction patterns
-
-**Upstream Contribution Workflows**
-- Contributing to Kubernetes while maintaining downstream products
-- Cross-project collaboration (Kubernetes, CRI-O, OpenShift)
-- E2E testing and quality assurance practices
-
----
-
 *Building production infrastructure for Kubernetes platforms and contributing to the cloud-native ecosystem.*
