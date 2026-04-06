@@ -1,6 +1,6 @@
 # Sai Ramesh Vanka (@sairameshv)
 
-**Software Engineer at Red Hat | Kubernetes Contributor**
+**Senior Software Engineer at Red Hat | Kubernetes Contributor**
 
 Platform engineer working on Kubernetes infrastructure, focusing on node configuration management, GPU/accelerator resource allocation, and container runtime integration. Contributing to both upstream Kubernetes and OpenShift platform components.
 
