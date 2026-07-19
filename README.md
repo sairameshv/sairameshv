@@ -2,50 +2,78 @@
 
 **Senior Software Engineer at Red Hat | Kubernetes Contributor**
 
-Platform engineer working on Kubernetes infrastructure, focusing on node configuration management, GPU/accelerator resource allocation, and container runtime integration. Contributing to both upstream Kubernetes and OpenShift platform components.
+Platform engineer working on Kubernetes infrastructure, focusing on Dynamic Resource Allocation for GPU/accelerator scheduling, AI inference platform enablement, and node-level platform configuration. Contributing to upstream Kubernetes, CNCF projects, and OpenShift platform components.
 
 ---
 
 ## Key Projects
 
-### InstaSlice (DAS) Operator
-Core contributor to production GPU slicing operator enabling multiple AI/ML workloads to share expensive GPU hardware through fine-grained resource allocation.
+### Dynamic Resource Allocation (DRA) for Kubernetes
+Contributing to upstream Kubernetes DRA implementation and downstream OpenShift enablement for GPU multi-tenancy.
 
-- Core operator implementation and production hardening (security, RBAC, node reboot support)
+**Upstream (kubernetes/kubernetes):**
+- KEP-5004 (DRAExtendedResources): upgrade/downgrade e2e tests ([#136568](https://github.com/kubernetes/kubernetes/pull/136568)), race condition fix in quota test ([#139085](https://github.com/kubernetes/kubernetes/pull/139085))
+- Global cache for DeviceClass-to-extended-resource mapping ([#134326](https://github.com/kubernetes/kubernetes/pull/134326))
+- DRA integration test fixes ([#137432](https://github.com/kubernetes/kubernetes/pull/137432))
+- KEP-5004 test planning for rollout/upgrade/rollback ([kubernetes/enhancements#5751](https://github.com/kubernetes/enhancements/pull/5751))
+
+**Downstream (OpenShift):**
+- Enabled DRA featuregate by default in OpenShift API ([openshift/api#2498](https://github.com/openshift/api/pull/2498))
+- DRA e2e tests for NVIDIA GPU hardware ([openshift/origin#30758](https://github.com/openshift/origin/pull/30758))
+- KEP-4815 Partitionable Devices e2e tests ([openshift/origin#31230](https://github.com/openshift/origin/pull/31230))
+- CI infrastructure for DRA validation on NVIDIA GPU
+
+### InstaSlice (DAS) Operator
+Core contributor to production GPU slicing operator enabling multiple AI/ML workloads to share GPU hardware through fine-grained MIG-based resource allocation.
+
+- Operator maintenance: CVE remediation, libnvidia-ml updates, production hardening
+- Release pipeline management via Konflux/Tekton across OCP 4.18-4.21
 - E2E testing infrastructure across KIND, OpenShift SNO, and multi-GPU clusters
-- **KubeCon India 2025** - Selected for Gold Sponsor In-Booth Demo
 - Repository: [openshift/instaslice-operator](https://github.com/openshift/instaslice-operator)
 
-### Dynamic Resource Allocation (DRA) for Kubernetes
-Contributing to upstream Kubernetes DRA implementation with focus on testing and quality.
+### DRA OCP Validator Plugin
+Building a Claude Code plugin for automated DRA validation on OpenShift clusters.
+- Repository: [openshift-eng/ai-helpers#520](https://github.com/openshift-eng/ai-helpers/pull/520)
 
-- Upgrade/downgrade e2e test scenarios ([kubernetes/kubernetes#136568](https://github.com/kubernetes/kubernetes/pull/136568))
-- Performance optimizations through global caching ([kubernetes/kubernetes#134326](https://github.com/kubernetes/kubernetes/pull/134326))
-- Test planning for KEP-5004 ([kubernetes/enhancements#5751](https://github.com/kubernetes/enhancements/pull/5751))
+### OpenShift Node Infrastructure
+Drove node-level platform features across Machine Config Operator, Cluster Node Tuning Operator, CRI-O, and OpenShift API.
 
-### OpenShift Node Configuration Controller
-Built controller infrastructure in Machine Config Operator for centralized management of node-level platform configurations.
-
-- Custom resource controller for cgroup modes, worker latency profiles, and kubelet settings
-- Enabled platform-wide features including cgroups v2 migration (2022-2026) and edge computing support
-- Repository: [openshift/machine-config-operator](https://github.com/openshift/machine-config-operator/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged)
-
-### Container Runtime Integration
-- CRI-O integration for event-driven Pod Lifecycle Event Generator (Evented PLEG)
-- Contributed to container runtime support for upstream Kubernetes features
-- Repository: [cri-o/cri-o](https://github.com/cri-o/cri-o/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged)
+- **Cgroups v1 to v2 migration:** Built controller support for cgroup mode switching and led the platform-wide migration (2022-2026)
+- **Cgroups v1 deprecation:** Removed cgroupv1 code paths across MCO, NTO, and OpenShift API ([MCO#5399](https://github.com/openshift/machine-config-operator/pull/5399), [NTO#1428](https://github.com/openshift/cluster-node-tuning-operator/pull/1428), [API#2579](https://github.com/openshift/api/pull/2579))
+- **Worker Latency Profiles:** Node configuration controller for latency-sensitive edge computing deployments
+- **Evented PLEG:** CRI-O and kubelet integration for event-driven Pod Lifecycle Event Generator, replacing the polling-based approach
 
 ---
 
 ## Open Source Contributions
 
-**100+ merged PRs** across upstream Kubernetes, CRI-O, and OpenShift platform components with focus on GPU management, node configuration, and container runtime integration.
+**169+ merged PRs** across upstream Kubernetes, CRI-O, and OpenShift platform components.
 
-- [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged) - DRA e2e testing, performance improvements
-- [kubernetes/enhancements](https://github.com/kubernetes/enhancements/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged) - KEP-5004 test planning
-- [cri-o/cri-o](https://github.com/cri-o/cri-o/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged) - PLEG integration, CI improvements
+Member of: [kubernetes](https://github.com/kubernetes) | [kubernetes-sigs](https://github.com/kubernetes-sigs) | [openshift](https://github.com/openshift) | [cri-o](https://github.com/cri-o)
 
-**[Detailed Contribution Analysis](https://gist.github.com/sairameshv/f74ec713a04acd045dc244736a98f4cb)** - Comprehensive technical breakdown and impact summary
+| Repository | Focus |
+|------------|-------|
+| [kubernetes/kubernetes](https://github.com/kubernetes/kubernetes/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged) | DRA e2e testing, KEP-5004, performance improvements |
+| [kubernetes/enhancements](https://github.com/kubernetes/enhancements/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged) | KEP-5004 test planning |
+| [kubernetes-sigs/jobset](https://github.com/kubernetes-sigs/jobset/pulls?q=is%3Apr+author%3Asairameshv) | DRA integration documentation |
+| [openshift/origin](https://github.com/openshift/origin/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged) | DRA & GPU e2e testing |
+| [openshift/instaslice-operator](https://github.com/openshift/instaslice-operator/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged) | GPU slicing operator |
+| [cri-o/cri-o](https://github.com/cri-o/cri-o/pulls?q=is%3Apr+author%3Asairameshv+is%3Amerged) | Evented PLEG, CI improvements |
+
+---
+
+## Conference Demos
+
+| Event | Topic |
+|-------|-------|
+| **KubeCon + CloudNativeCon India 2026** (Mumbai) | Multi-Tenancy of AI Inference Workloads on OpenShift using llm-d and DRA — Red Hat Booth Demo |
+| **KubeCon India 2025** | InstaSlice (DAS) - GPU Slicing for AI/ML Workloads — Red Hat Booth Demo |
+
+---
+
+## Technologies
+
+`Go` `Kubernetes` `OpenShift` `DRA` `NVIDIA MIG` `llm-d` `vLLM` `GPU Operator` `CRI-O` `Helm` `Kustomize` `Prow` `Tekton` `Konflux` `GCP`
 
 ---
 
@@ -53,8 +81,12 @@ Built controller infrastructure in Machine Config Operator for centralized manag
 
 - **GitHub**: [@sairameshv](https://github.com/sairameshv)
 - **LinkedIn**: [linkedin.com/in/sai-ramesh-vanka](https://linkedin.com/in/sai-ramesh-vanka)
-- **Email**: v.sairamesh1@gmail.com
+- **Email**: svanka@redhat.com
 
 ---
 
 *Building production infrastructure for Kubernetes platforms and contributing to the cloud-native ecosystem.*
+
+---
+
+*Last updated: July 19, 2026*
