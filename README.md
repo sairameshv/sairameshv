@@ -24,10 +24,10 @@ Contributing to upstream Kubernetes DRA implementation and downstream OpenShift 
 - CI infrastructure for DRA validation on NVIDIA GPU
 
 ### InstaSlice (DAS) Operator
-Core contributor to production GPU slicing operator enabling multiple AI/ML workloads to share GPU hardware through fine-grained MIG-based resource allocation.
+Core contributor to GPU slicing operator enabling multiple AI/ML workloads to share GPU hardware through fine-grained MIG-based resource allocation. Shipped as Tech Preview in OpenShift 4.18-4.21.
 
-- Operator maintenance: CVE remediation, libnvidia-ml updates, production hardening
-- Release pipeline management via Konflux/Tekton across OCP 4.18-4.21
+- Operator maintenance: CVE remediation, libnvidia-ml updates, hardening
+- Konflux release engineering for OCP 4.20-4.21: release configuration, NVIDIA CUDA/RHEL-AI repository enablement, RPM validation fixes, FBC catalog pipeline management
 - E2E testing infrastructure across KIND, OpenShift SNO, and multi-GPU clusters
 - Repository: [openshift/instaslice-operator](https://github.com/openshift/instaslice-operator)
 
@@ -47,7 +47,7 @@ Drove node-level platform features across Machine Config Operator, Cluster Node 
 
 ## Open Source Contributions
 
-**169+ merged PRs** across upstream Kubernetes, CRI-O, and OpenShift platform components.
+**170+ merged PRs** across upstream Kubernetes, CRI-O, and OpenShift platform components (GitHub only).
 
 Member of: [kubernetes](https://github.com/kubernetes) | [kubernetes-sigs](https://github.com/kubernetes-sigs) | [openshift](https://github.com/openshift) | [cri-o](https://github.com/cri-o)
 
@@ -89,4 +89,4 @@ Member of: [kubernetes](https://github.com/kubernetes) | [kubernetes-sigs](https
 
 ---
 
-*Last updated: July 19, 2026*
+*Last updated: July 20, 2026*
