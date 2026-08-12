@@ -18,6 +18,7 @@ Contributing to upstream Kubernetes DRA implementation and downstream OpenShift 
 - KEP-5004 test planning for rollout/upgrade/rollback ([kubernetes/enhancements#5751](https://github.com/kubernetes/enhancements/pull/5751))
 
 **Downstream (OpenShift):**
+- *Current focus:* Enabling Workload Aware Scheduling (WAS) in downstream OCP — gang scheduling, Workload and PodGroup APIs
 - Enabled DRA featuregate by default in OpenShift API ([openshift/api#2498](https://github.com/openshift/api/pull/2498))
 - DRA e2e tests for NVIDIA GPU hardware ([openshift/origin#30758](https://github.com/openshift/origin/pull/30758))
 - KEP-4815 Partitionable Devices e2e tests ([openshift/origin#31230](https://github.com/openshift/origin/pull/31230))
@@ -62,6 +63,15 @@ Member of: [kubernetes](https://github.com/kubernetes) | [kubernetes-sigs](https
 
 ---
 
+## Publications & Technical Writing
+
+| Title | Platform |
+|-------|----------|
+| [Multitenant AI inference with dynamic resource allocation on OpenShift](https://developers.redhat.com/articles/2026/08/03/multitenant-ai-inference-dynamic-resource-allocation-openshift) | Red Hat Developer |
+| [DRA Integration — Workload Aware Scheduling](https://jobset.sigs.k8s.io/docs/workload-aware-scheduling/dra/) | kubernetes-sigs/jobset docs |
+
+---
+
 ## Conference Demos
 
 | Event | Topic |
@@ -89,4 +99,4 @@ Member of: [kubernetes](https://github.com/kubernetes) | [kubernetes-sigs](https
 
 ---
 
-*Last updated: July 20, 2026*
+*Last updated: August 13, 2026*
